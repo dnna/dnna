@@ -1,0 +1,6 @@
+<div class="contentItem">
+    <div class="contentTitle"><?php echo $this->school->get_title(); ?></div>
+    <div class="rightSide de-emphasize"><?php echo $this->school->get_location(); ?></div>
+    <div class="contentSubtitle"><?php echo $this->school->get_degree().' '.$this->school->get_major().', '.$this->getMonth(6).' '.$this->school->get_enddate()->toString(Zend_Date::YEAR).', '.$this->translate('classification').$this->school->get_characterization().' ('.$this->school->get_grade().'/10)'; ?></div>
+    <div class="content"><?php echo $this->school->get_content(); ?></div>
+</div>

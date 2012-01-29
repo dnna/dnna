@@ -1,0 +1,14 @@
+RewriteEngine On
+ 
+RewriteRule ^\.htaccess$ - [F]
+ 
+RewriteCond %{REQUEST_URI} =""
+RewriteRule ^.*$ /cv/public/index.php [NC,L]
+ 
+RewriteCond %{REQUEST_URI} !^/cv/public/.*$
+RewriteRule ^(.*)$ /cv/public/$1
+ 
+RewriteCond %{REQUEST_FILENAME} -f
+RewriteRule ^.*$ - [NC,L]
+ 
+RewriteRule ^public/.*$ /cv/public/index.php [NC,L]

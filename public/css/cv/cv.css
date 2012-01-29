@@ -1,0 +1,77 @@
+root { 
+    display: block;
+    font-family:"Georgia", Georgia, serif;
+    font-size: 10pt;
+}
+body {
+    /*height: 11.69in;*/
+    /*width: 8.27in;*/
+    /*height: 9.34in;*/
+    /* width: 5.77in; Marings 1.25in left and right */
+    width: 7.27in;
+    margin-left: 1in;
+    margin-right: auto;
+    line-height: 120%; /* Can be 14pt */
+}
+ul li{
+    margin: 0px;
+    padding: 0px;
+}
+ul {
+    margin: 0px;
+    padding: 0px;
+    list-style-type: square;
+}
+.maintitle {
+    font-family:Cambria,'Palatino Linotype','Book Antiqua','URW Palladio L',serif;
+    color: #404040;
+    font-size: 14pt;
+    font-weight: bold;
+}
+.section {
+    padding-top: 12pt;
+    clear:both;
+    page-break-inside: avoid;
+}
+.sectiontitle {
+    font-family:Cambria,'Palatino Linotype','Book Antiqua','URW Palladio L',serif;
+    font-weight: bold;
+    font-size: 12pt;
+    text-transform: uppercase;
+    letter-spacing: 2pt;
+    border-top: solid thin #000000;
+    border-bottom: solid thin #BFBFBF;
+}
+.contentItem {
+    clear: both;
+    float: left;
+    width: 100%;
+    margin-top: 6pt;
+    margin-bottom: 8pt;
+}
+.languages .contentItem .contentItem {
+    margin-top: 0pt;
+    margin-bottom: 0pt;
+}
+.contentTitle {
+    float: left;
+    clear: left;
+    font-weight: bold;
+}
+.contentSubtitle {
+    float: left;
+    clear: left;
+    font-style: italic;
+    width: 80%;
+}
+.content {
+    float: left;
+    clear: left;
+}
+.rightSide {
+    float: right;
+    clear: right;
+}
+.de-emphasize {
+    color: #BFBFBF;
+}

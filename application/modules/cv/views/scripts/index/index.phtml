@@ -1,0 +1,79 @@
+        <?php $this->headLink()->appendStylesheet($this->baseUrl('css/cv/cv.css'), 'screen, print'); ?>
+        <div class="maintitle"><?php echo $this->translate('headline'); ?></div>
+        <div class="section">
+            <div class="sectiontitle personalinfo"><?php echo $this->translate('personalinfo'); ?></div>
+            <!-- Προσωπικές πληροφορίες -->
+            <div class="contentItem">
+            <div class="content"><?php echo $this->translate('name'); ?></div>
+            <div class="content"><?php echo $this->translate('address'); ?></div>
+            <div class="content"><?php echo $this->translate('phone'); ?></div>
+            <div class="content"><?php echo $this->translate('email'); ?></div>
+            </div>
+        </div>
+
+        <div class="section workexperience">
+            <div class="sectiontitle"><?php echo $this->translate('workexperience'); ?></div>
+            <?php foreach($this->profile['workexperience'] as $curPosition) {
+                echo $this->partial('partials/position.phtml', 'default', array('position' => $curPosition));
+            }
+            ?>
+        </div>
+
+        <div class="section volunteering">
+            <div class="sectiontitle"><?php echo $this->translate('volunteering'); ?></div>
+            <?php foreach($this->profile['projects'] as $curProject) {
+                echo $this->partial('partials/project.phtml', 'default', array('project' => $curProject));
+            }
+            ?>
+            <?php /*foreach($this->profile['volunteering'] as $curPosition) {
+                echo $this->partial('partials/position.phtml', 'default', array('position' => $curPosition));
+            }*/
+            ?>
+        </div>
+
+        <div class="section education">
+            <div class="sectiontitle"><?php echo $this->translate('education'); ?></div>
+            <?php foreach($this->profile['education'] as $curSchool) {
+                echo $this->partial('partials/education.phtml', 'default', array('school' => $curSchool));
+            }
+            ?>
+        </div>
+
+        <div class="section technicalskills">
+            <div class="sectiontitle"><?php echo $this->translate('technicalskills'); ?></div>
+            <div class="contentItem">
+                <div class="content">
+                    <?php echo $this->profile['specialties']->get_content(); ?>
+                </div>
+            </div>
+        </div>
+
+        <div class="section languages">
+            <div class="sectiontitle"><?php echo $this->translate('languages'); ?></div>
+            <div class="contentItem">
+                <div class="contentItem">
+                    <div class="content"><ul><li><?php echo $this->translate('greek'); ?></li></ul></div>
+                </div>
+                <div class="contentItem">
+                    <div class="content"><ul><li><?php echo $this->translate('english'); ?></li></ul></div>
+                    <div class="rightSide de-emphasize">University of Cambridge</div>
+                </div>
+            </div>
+        </div>
+
+<!--    <div style="page-break-after: always"></div>
+        <div class="section">
+            <div class="sectiontitle"><?php echo $this->translate('references'); ?></div>
+            <div class="contentItem">
+                <div class="contentTitle">Αικατερίνη Γεωργούλη, Τεχνολογικό Εκπαιδευτικό Ίδρυμα Αθήνας</div>
+                <div class="contentSubtitle">Καθηγήτρια, Επιβλέπουσα Πτυχιακής</div>
+                <div class="content">T.E.I. Αθήνας, Αγίου Σπυρίδωνος, Αιγάλεω, Αθήνα 12210</div>
+                <div class="content">+30 210 538 53 25</div>
+            </div>
+            <div class="contentItem">
+                <div class="contentTitle">Ιφιγένεια Φουντά, Τεχνολογικό Εκπαιδευτικό Ίδρυμα Αθήνας</div>
+                <div class="contentSubtitle">Επίκουρη Καθηγήτρια</div>
+                <div class="content">T.E.I. Αθήνας, Αγίου Σπυρίδωνος, Αιγάλεω, Αθήνα 12210</div>
+                <div class="content">+30 210 538 57 84</div>
+            </div>
+        </div>-->
