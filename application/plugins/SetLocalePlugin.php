@@ -5,7 +5,7 @@
 class Application_Plugin_SetLocalePlugin extends Zend_Controller_Plugin_Abstract
 {
     public function preDispatch(Zend_Controller_Request_Abstract $request) {
-        $lang = $request->getParam('lang', 'el');
+        $lang = $request->getParam('lang', 'en');
         if($lang == 'en') {
             $locale = 'en_US';
             $linkedinurl = 'http://gr.linkedin.com/in/dimosthenisnikoudis';
