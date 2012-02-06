@@ -12,6 +12,7 @@ class Cv_IndexController extends Zend_Controller_Action {
      * @return void
      */
     public function indexAction() {
+        $this->view->pageTitle = 'headlinecv';
         $this->view->profile = $this->_helper->parseProfile(Zend_Registry::get('LinkedInUrl'));
     }
 

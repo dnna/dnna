@@ -1,7 +1,30 @@
 <?php
+$view = Zend_Controller_Front::getInstance()->getParam('bootstrap')->getResource('view');
 return array(
-    'headline' => 'Dimosthenis Nikoudis - Curriculum Vitae',
+    'headlinemain' => 'Dimosthenis Nektarios Nikoudis Alessios',
+    'headlinecv' => 'Dimosthenis Nikoudis - Curriculum Vitae',
 
+    'mainpagedescr' => 'Personal website for Dimosthenis Nikoudis',
+    'cvdescr' => 'Dimosthenis Nektarios Nikoudis Alessios - Curriculum Vitae',
+    'softeng' => 'Software Engineer',
+
+    // Main page stuff
+    'home' => 'Home',
+    'projects' => 'Projects',
+    'contact' => 'Contact',
+    'cv' => 'CV',
+    'vard' => 'VCard',
+    'gcodeprofile' => 'Google Code Profile',
+    
+    // Summary
+    'summary' => "My name is Dimosthenis Nikoudis and I'm a young, but experienced, Software Engineer currently working in the Technological Educational Institute of Athens. I'm passionate about new technologies, I'm a strong proponent of open-source software, and I like to participate in open communities such as the Athens Wireless Metropolitan Network.",
+    'contactsummary' => 'You can view my online résumé <a href="'.$view->url(array('module' => 'cv', 'controller' => 'index')).'">here</a>, or you can find me in one of the social networks listed below. Feel free to add or message me at any time.',
+
+    // Languages
+    'en' => 'English',
+    'el' => 'Ελληνικά',
+
+    // CV Stuff
     'personalinfo' => 'Personal Details',
     'workexperience' => 'Work Experience',
     'volunteering' => 'Volunteering/Non-Paid Experience',
@@ -20,5 +43,8 @@ return array(
 
     'greek' => 'Greek: Native',
     'english' => 'English: C2, Certificate of Proficiency in English',
+
+    // Errors
+    'pagenotfound' => 'Page not found'
 );
 ?>

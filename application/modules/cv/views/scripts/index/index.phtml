@@ -1,5 +1,6 @@
-        <?php $this->headLink()->appendStylesheet($this->baseUrl('css/cv/cv.css'), 'screen, print'); ?>
-        <div class="maintitle"><?php echo $this->translate('headline'); ?></div>
+<?php $this->headMeta()->appendName('Description', $this->translate('cvdescr')); ?>
+<?php $this->headLink()->appendStylesheet($this->baseUrl('css/cv/cv.css'), 'screen, print'); ?>
+        <div class="maintitle"><?php echo $this->translate('headlinecv'); ?></div>
         <div class="section">
             <div class="sectiontitle personalinfo"><?php echo $this->translate('personalinfo'); ?></div>
             <!-- Προσωπικές πληροφορίες -->

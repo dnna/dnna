@@ -1,0 +1,27 @@
+<?php $this->headScript()->appendFile($this->baseUrl('js/main.js')); ?>
+<?php $this->headLink()->appendStylesheet($this->baseUrl('css/global.css'), 'screen, print'); ?>
+<?php $this->headMeta()->appendName('Description', $this->translate('mainpagedescr')); ?>
+<div id="page">
+    <h1><?php echo $this->translate($this->pageTitle); ?></h1>
+    <h2><?php echo $this->translate('softeng'); ?></h2>
+    <nav>
+        <ul id="tabs">
+            <li><a href="<?php echo $this->url(array('controller' => 'index')); ?>"><?php echo $this->translate('home'); ?></a></li>
+            <li><a href="<?php echo $this->url(array('controller' => 'projects')); ?>"><?php echo $this->translate('projects'); ?></a></li>
+            <li><a href="<?php echo $this->url(array('controller' => 'contact')); ?>"><?php echo $this->translate('contact'); ?></a></li>
+        </ul>
+    </nav>
+    <div id="languagebar">
+        <?php foreach ($this->languages as $curCode => $curLanguage) { ?>
+            <div class="language"><a href="<?php echo $this->getLanguageLink($curCode); ?>"><?php echo $curLanguage; ?></a></div>
+        <?php } ?>
+    </div>
+    <div id="tabs-container">
+        <?php echo $this->content; ?>
+    </div>
+    <footer>
+        <a href="<?php echo $this->baseUrl('dnikoudis.vcf'); ?>"><?php echo $this->translate('vard'); ?></a> | 
+        <a href="<?php echo $this->url(array('module' => 'cv', 'controller' => 'index')); ?>"><?php echo $this->translate('cv'); ?></a> | 
+        <a href="http://code.google.com/u/dnna@dnna.gr/"><?php echo $this->translate('gcodeprofile'); ?></a>
+    </footer>
+</div>

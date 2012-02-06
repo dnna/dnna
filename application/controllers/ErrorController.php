@@ -58,7 +58,7 @@ class ErrorController extends Zend_Controller_Action
     public function notfoundAction() {
         $this->getResponse()->setHttpResponseCode(404);
         $priority = Zend_Log::NOTICE;
-        $this->view->pageTitle = '404 - Η σελίδα δεν βρέθηκε';
+        $this->view->pageTitle = $this->view->translate('pagenotfound');
     }
 
     public function getLog()

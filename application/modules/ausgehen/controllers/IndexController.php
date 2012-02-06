@@ -12,6 +12,7 @@ class Ausgehen_IndexController extends Zend_Controller_Action {
      * @return void
      */
     public function indexAction() {
+        $this->view->pageTitle = 'Ausgehen';
         $this->view->events = $this->_helper->parseCinemas();
     }
 
