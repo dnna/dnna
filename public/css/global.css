@@ -53,7 +53,6 @@ UL#tabs LI A:HOVER, UL#tabs LI.current A {
 }
 UL#tabs LI.current A {
      font-weight: bold;
-     font-size: 14px;
 }
 #tabs-container {
      position: relative;
