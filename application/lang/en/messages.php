@@ -19,6 +19,7 @@ return array(
     // Summary
     'summary' => "My name is Dimosthenis Nikoudis and I'm a young, but experienced, Software Engineer currently working in the Technological Educational Institute of Athens. I'm passionate about new technologies, I'm a strong proponent of open-source software, and I like to participate in open communities such as the Athens Wireless Metropolitan Network.",
     'contactsummary' => 'You can view my online résumé <a href="'.$view->url(array('module' => 'cv', 'controller' => 'index')).'">here</a>, or you can find me in one of the social networks listed below. Feel free to add or message me at any time.',
+    'projectssummary' => 'This page is under construction. In the meantime, you can find my projects in my <a href="http://www.linkedin.com/in/dimosthenisnikoudis">LinkedIn profile</a>.',
 
     // Languages
     'en' => 'English',
