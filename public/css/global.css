@@ -76,7 +76,7 @@ UL#tabs LI.current A {
     margin-top: 16px;
     padding-right: 20px;
     padding-left: 20px;
-    margin-bottom: 20px;
+    margin-bottom: 8px;
     font-size: 15px;
     height: 16px;
     text-decoration: none;

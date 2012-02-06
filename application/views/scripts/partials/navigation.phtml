@@ -1,0 +1,31 @@
+<ul id="tabs">
+<?php
+// loop root level (only has Home, but later may have an Admin root page?)
+foreach ($this->container as $page) {
+    // check if it is active (not recursive)
+    if($this->navigation()->accept($page)) {
+        if($page->getAction() == "" && ($page->getController() == "" || $page->getController() === $this->getControllerName()) && $page->getModule() === $this->getModuleName()) {
+            $params = $page->getParams();
+            if(is_array($page->getParams()) && count($page->getParams()) > 0) {
+                unset($params['_fragment']);
+                $userparams = $this->getUserParams();
+                foreach($page->getParams() as $curParam) {
+                    if(in_array($curParam, $userparams)) {
+                        $page->setActive(true);
+                        break;
+                    }
+                }
+            } else {
+                $page->setActive(true);
+            }
+        }
+        // Αν πρόκειται για αναθεώρηση έργου προσθέτουμε την παράμετρο
+        if(!$page->isActive(false)) {
+            echo '<li>'.$this->menu()->htmlify($page);
+        } else {
+            echo '<li class="current">'.$this->menu()->htmlify($page).'</li>';
+        }
+    }
+}
+?>
+</ul>

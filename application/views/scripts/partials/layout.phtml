@@ -5,11 +5,9 @@
     <h1><?php echo $this->translate($this->pageTitle); ?></h1>
     <h2><?php echo $this->translate('softeng'); ?></h2>
     <nav>
-        <ul id="tabs">
-            <li><a href="<?php echo $this->url(array('controller' => 'index')); ?>"><?php echo $this->translate('home'); ?></a></li>
-            <li><a href="<?php echo $this->url(array('controller' => 'projects')); ?>"><?php echo $this->translate('projects'); ?></a></li>
-            <li><a href="<?php echo $this->url(array('controller' => 'contact')); ?>"><?php echo $this->translate('contact'); ?></a></li>
-        </ul>
+        <?php $this->navigation()->menu()->renderMenu(null,array('maxDepth' => 0)); ?>
+        <?php $this->navigation()->menu()->setPartial('partials/navigation.phtml'); ?>
+        <?php echo $this->navigation()->menu()->render(); ?>
     </nav>
     <div id="languagebar">
         <?php foreach ($this->languages as $curCode => $curLanguage) { ?>

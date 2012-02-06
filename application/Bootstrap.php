@@ -84,6 +84,13 @@ class Bootstrap extends Zend_Application_Bootstrap_Bootstrap {
         $this->getResource('view')->addHelperPath(APPLICATION_PATH.'/../library/Dnna/views/helpers', 'Dnna_View_Helper');
     }
 
+    protected function _initViewAndNavigation() {
+        $navigationConfig = new Zend_Config_Xml(APPLICATION_PATH . '/configs/navigation.xml');
+        $navigation = new Zend_Navigation($navigationConfig);
+        Zend_Registry::set('navigation', $navigation);
+        $this->getResource('view')->navigation(Zend_Registry::get('navigation'));
+    }
+
     /*protected function _initDisableErrorHandler() {
         Zend_Controller_Front::getInstance()->setParam('noErrorHandler', true);
     }*/
