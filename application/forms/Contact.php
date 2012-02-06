@@ -7,16 +7,24 @@ class Application_Form_Contact extends Dnna_Form_FormBase {
         ));
         $this->addElement('text', 'email', array(
             'required' => true,
-            'label' => 'youremail'
+            'label' => 'youremail',
+            'validators' => array(
+                array('validator' => 'EmailAddress'),
+            )
         ));
         $this->addElement('textarea', 'message', array(
             'required' => true,
-            'label' => 'yourmessage'
+            'label' => 'yourmessage',
+            'validators' => array(
+                array('validator' => 'StringLength', 'options' => array(0, $this->_textareaMaxLength)),
+            ),
+            'rows' => $this->_textareaRows,
+            'cols' => $this->_textareaCols,
         ));
-        $this->addElement('submit', 'email', array(
+        $this->addElement('submit', 'send', array(
             'required' => false,
-            'ignored' => true,
-            'label' => 'youremail'
+            'ignore' => true,
+            'label' => 'send'
         ));
     }
 }

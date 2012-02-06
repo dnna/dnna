@@ -1,7 +1,7 @@
 var containerId = '#tabs-container';
 
 var tabsId = '#tabs';
-$(document).ready(function(){
+/*$(document).ready(function(){
      // Preload tab on page load
      if($(tabsId + ' LI.current A').length > 0){
           loadTab($(tabsId + ' LI.current A'));
@@ -13,7 +13,7 @@ $(document).ready(function(){
           loadTab($(this));
           return false;
      });
-});
+});*/
 function loadTab(tabObj){
      if(!tabObj || !tabObj.length){ return; }
      $(containerId).addClass('loading');

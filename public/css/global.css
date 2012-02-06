@@ -44,7 +44,7 @@ UL#tabs LI A {
      background: #F0F0F0;
      text-decoration: none;
      color: #333333;
-     height: 22px;
+     height: 16px;
      border-top-right-radius: 5px;
      border-top-left-radius: 5px;
 }
@@ -127,5 +127,5 @@ a:hover {
 #contactsummary {
     margin-top: 15px;
     padding-bottom: 10px;
-    border-bottom: 1px solid #E0E0E0;
+    border-bottom: 1px solid #BFBFBF;
 }

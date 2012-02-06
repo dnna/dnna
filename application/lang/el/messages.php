@@ -22,6 +22,13 @@ return array(
         Μπορείτε να δείτε το online βιογραφικό μου <a href="'.$view->url(array('module' => 'cv', 'controller' => 'index')).'">εδώ</a>, ή να με βρείτε σε κάποιο από τα κοινωνικά δίκτυα που παρατίθενται παρακάτω.',
     'projectssummary' => 'Αυτή η σελίδα βρίσκεται υπό κατασκευή. Στο ενδιάμεσο, μπορείτε να βρείτε τα έργα μου στο <a href="http://www.linkedin.com/in/dimosthenisnikoudis">προφίλ μου στο LinkedIn</a>.',
 
+    // Contact
+    'yourname' => 'Όνομα',
+    'youremail' => 'E-Mail',
+    'yourmessage' => 'Μήνυμα',
+    'send' => 'Αποστολή',
+    'messagesent' => 'Το μήνυμα σας στάλθηκε με επιτυχία.',
+
     // Languages
     'en' => 'English',
     'el' => 'Ελληνικά',
