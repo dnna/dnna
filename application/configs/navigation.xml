@@ -7,13 +7,13 @@
         <action>index</action>
         <resource>guestsection</resource>
     </home>
-    <projects>
+    <!--<projects>
         <label>projects</label>
         <module>default</module>
         <controller>projects</controller>
         <action>index</action>
         <resource>guestsection</resource>
-    </projects>
+    </projects>-->
     <contact>
         <label>contact</label>
         <module>default</module>
