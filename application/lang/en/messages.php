@@ -15,6 +15,7 @@ return array(
     'cv' => 'CV',
     'vard' => 'VCard',
     'gcodeprofile' => 'Google Code Profile',
+    'dissertation' => 'Dissertation',
     
     // Summary
     //'summary' => "My name is Dimosthenis Nikoudis and I'm a young but experienced Software Engineer currently working in the Technological Educational Institute of Athens. I'm passionate about new technologies, a strong proponent of open-source software, and I like to participate in open communities such as the Athens Wireless Metropolitan Network.",
