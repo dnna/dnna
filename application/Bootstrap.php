@@ -75,6 +75,7 @@ class Bootstrap extends Zend_Application_Bootstrap_Bootstrap {
             $config = Zend_Registry::get('entityManager')->getConfiguration();
             $config->addCustomNumericFunction('DISTANCE', 'Dnna\Doctrine\Types\Distance');
             $config->addCustomNumericFunction('POINT_STR', 'Dnna\Doctrine\Types\PointStr');
+            $config->addCustomNumericFunction('TIMEDIFFSEC', 'Dnna\Doctrine\Types\TimeDiffSec');
         }
         Zend_Controller_Action_HelperBroker::addPath(APPLICATION_PATH.'/../library/Dnna/controllers/helpers',
                                                       'Dnna_Action_Helper');
